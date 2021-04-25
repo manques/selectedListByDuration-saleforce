@@ -1,0 +1,18 @@
+<template>
+    <div>
+       <aura:component>
+            <lightning-select name={selectedData.name}
+                              label={selectedData.label}
+                              required={selectedData.required}
+                              onchange={onSelect}>
+                <template for:each={selectedData.options}
+                          for:item="option">
+                    <option key={option.id}
+                            value={option.value}>
+                        {option.label}
+                    </option>
+                </template>
+            </lightning-select>
+       </aura:component>
+    </div>
+</template>
